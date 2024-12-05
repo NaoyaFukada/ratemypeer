@@ -4,7 +4,7 @@
 <div class="container mt-5">
     <h2 class="mb-4">Top 10 Reviewers</h2>
     <table class="table table-striped table-bordered">
-        <thead class="thead-dark">
+        <thead class="table-dark">
             <tr>
                 <th>#</th>
                 <th>Student Name</th>
