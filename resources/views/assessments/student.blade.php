@@ -152,23 +152,24 @@
                         <form method="POST" action="{{ route('reviews.rate', $review->id) }}">
                             @csrf
                             @method('PUT')
-                                <div class="d-flex align-items-center mt-2">
-                                    <label for="rating-{{ $review->id }}" class="mr-3">Rate this review:</label>
-                                    <input 
-                                        type="range" 
-                                        name="rating" 
-                                        id="rating-{{ $review->id }}" 
-                                        min="1" 
-                                        max="5" 
-                                        value="{{ $review->rating ?? 3 }}" 
-                                        class="form-range mr-3" 
-                                        style="width: 150px;"
-                                    >
-                                    <span id="rating-display-{{ $review->id }}" class="mr-3">{{ $review->rating ?? 3 }}</span>
-                                    <button type="submit" class="btn btn-primary" style="background-color: #1A3C65; padding: 8px 20px; font-size: 14px; border-radius: 5px;">
-                                        <i class="fas fa-paper-plane"></i> Submit Rating
-                                    </button>
-                                </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <label for="rating-{{ $review->id }}" class="me-3">Rate this review:</label>
+                                <input 
+                                    type="range" 
+                                    name="rating" 
+                                    id="rating-{{ $review->id }}" 
+                                    min="1" 
+                                    max="5" 
+                                    value="{{ $review->rating ?? 3 }}" 
+                                    class="form-range me-3" 
+                                    style="width: 150px;"
+                                    data-display-id="rating-display-{{ $review->id }}"
+                                >
+                                <span id="rating-display-{{ $review->id }}" class="me-3">{{ $review->rating ?? 3 }}</span>
+                                <button type="submit" class="btn btn-primary" style="background-color: #1A3C65; padding: 8px 20px; font-size: 14px; border-radius: 5px;">
+                                    <i class="fas fa-paper-plane"></i> Submit Rating
+                                </button>
+                            </div>
                         </form>
                     </li>
                 @endforeach
@@ -176,16 +177,17 @@
         @endif
     </div>
 
-</div>
-@foreach ($receivedReviews as $review)
-<script>
-    // Update the displayed value when the range input changes
-    const ratingInput = document.getElementById('rating-{{ $review->id }}');
-    const ratingDisplay = document.getElementById('rating-display-{{ $review->id }}');
-    
-    ratingInput.addEventListener('input', function() {
-        ratingDisplay.textContent = this.value;
-    });
-</script>
-@endforeach
+    <script>
+        // Attach event listeners to all range inputs on the page
+        document.querySelectorAll('input[type="range"]').forEach(input => {
+            const displayId = input.dataset.displayId;
+            const displayElement = document.getElementById(displayId);
+
+            if (displayElement) {
+                input.addEventListener('input', function () {
+                    displayElement.textContent = this.value;
+                });
+            }
+        });
+    </script>
 @endsection

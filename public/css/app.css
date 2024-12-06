@@ -79,3 +79,9 @@
 .navbar-nav .nav-item.dropdown .nav-link .ms-4 {
   margin-left: 0.6rem !important;
 }
+
+/* Review Rating */
+/* Style for the track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
