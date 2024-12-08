@@ -11,7 +11,7 @@
               @csrf
 
             <!-- Login Icon and Title -->
-            <div class="text-center mb-5">
+            <div class="text-center mb-lg-5 mb-4">
               <i class="fas fa-user-circle fa-4x" style="color: #1A3C65;"></i>
               <h1 class="h2 fw-bold mt-3">Login</h1>
             </div>
