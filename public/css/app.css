@@ -59,6 +59,12 @@
 }
 
 /* Nav Bar */
+.navbar-toggler:focus {
+  outline: none; /* Removes the black outline completely */
+  border: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Adds a custom white focus outline */
+}
+
 /* Reduce opacity for non-active nav links */
 .navbar-nav .nav-link {
   opacity: 0.6; /* Less opaque for inactive links */
