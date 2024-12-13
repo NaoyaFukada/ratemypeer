@@ -46,3 +46,21 @@ This project was developed as part of **Assignment 2** for the **2703ICT Web App
 - **Top Reviewers**:
   - The application includes a leaderboard showcasing the top reviewers based on:
     - The average ratings of their reviews and assessments submitted.
+
+## Key Technologies Used:
+
+- **Laravel**: The application leverages Laravel's robust features for building scalable web applications, including:
+
+  - **Routing**: Used to define and manage routes, ensuring seamless navigation between pages.
+  - **Blade Templating**: Provides HTML sanitization and facilitates clean, organized, and reusable views.
+  - **Migrations**: Simplifies database schema creation and modification using PHP.
+  - **Seedings**: Automatically inserts default data into the database for testing purposes.
+  - **Models**: Acts as a bridge between the frontend and backend by representing database tables as classes and records as instances. Eloquent ORM, Laravel's built-in ORM, makes it easier to interact with the database.
+  - **Controllers**: Handles the logic for processing user input, interacting with models, and returning appropriate views.
+  - **Pagination**: Enables the efficient handling and display of large datasets by breaking them into manageable chunks, with navigation controls for better user experience.
+
+- **Bootstrap**: CSS Library used for responsive and intuitive UI design.
+
+- **SQlite**: Relational database management system that uses SQL to interact with the database.
+
+- **Font Awesome**: Used for icons.
