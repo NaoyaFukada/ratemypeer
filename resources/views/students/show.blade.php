@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-4 mt-lg-5">
     <!-- Assessment and Student Details -->
     <div class="card p-4 mb-4" style="border-color: #1A3C65; background-color: #F7F9FC;">
         <h2 class="mb-4" style="color: #1A3C65;">Reviews for {{ $student->name }} in {{ $assessment->title }} ({{ $assessment->course->course_code }})</h2>

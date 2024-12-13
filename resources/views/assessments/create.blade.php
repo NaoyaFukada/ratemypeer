@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-4 mt-lg-5">
     <!-- Success Message -->
     @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -116,7 +116,7 @@
                 @enderror
 
             <!-- Submit Button -->
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center mt-3 mt-lg-5">
                 <button type="submit" class="btn btn-primary" style="background-color: #1A3C65;">Create Assessment</button>
             </div>
         </form>

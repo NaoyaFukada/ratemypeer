@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-4 mt-lg-5">
     <!-- Success Message -->
     @if (session('success'))
         <div class="alert alert-success">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-4 mt-lg-5">
     <h2 class="mb-4" style="color: #1A3C65;">Edit Peer Review Assessment for {{ $course->course_name }} ({{ $course->course_code }})</h2>
 
     <div class="card p-4 mb-4 shadow-sm" style="border-color: #1A3C65; background-color: #F7F9FC;">

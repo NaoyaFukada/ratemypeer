@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-4 mt-lg-5">
     <!-- Error Message Display -->
     @if ($errors->any())
         <div class="alert alert-danger alert-dismissible fade show">
@@ -53,9 +53,6 @@ s1230002
                 <label for="course_file" class="form-label fw-bold" style="color: #1A3C65;">Upload Course File (.txt)</label>
                 <div class="custom-file">
                     <input type="file" name="course_file" class="custom-file-input @error('course_file') is-invalid @enderror" id="customFile" accept=".txt" required>
-                    <label class="custom-file-label" for="customFile" style="border: 1px solid #1A3C65; border-radius: 5px; background-color: white;">
-                        Choose file
-                    </label>
                 </div>
                 @error('course_file')
                 <div class="invalid-feedback">
@@ -74,13 +71,4 @@ s1230002
         </form>
     </div>
 </div>
-
-<script>
-    // Change the label text to the file name when a file is selected
-    document.querySelector('.custom-file-input').addEventListener('change', function(e) {
-        var fileName = document.getElementById("customFile").files[0].name;
-        var nextSibling = e.target.nextElementSibling;
-        nextSibling.innerText = fileName;
-    });
-</script>
 @endsection
