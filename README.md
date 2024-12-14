@@ -4,6 +4,20 @@
 
 This project was developed as part of **Assignment 2** for the **2703ICT Web Application Development** course at **Griffith University**. The purpose of this web application is to enable students to share and submit peer reviews for a course. It implements a simplified peer review process tailored for educational use. The application supports two user types (teachers and students) and provides features for managing courses, assessments, and reviews.
 
+## Instructions for Demo
+
+The demo application is available at **[naoyafukada.com/ratemypeer/](https://naoyafukada.com/ratemypeer/)**.
+
+### 1. Login as a Student:
+
+- **Username:** `S1001`
+- **Password:** `password`
+
+### 2. Login as a Teacher:
+
+- **Username:** `T1001`
+- **Password:** `password`
+
 ## Features
 
 - **User Authentication**:
@@ -64,3 +78,23 @@ This project was developed as part of **Assignment 2** for the **2703ICT Web App
 - **SQlite**: Relational database management system that uses SQL to interact with the database.
 
 - **Font Awesome**: Used for icons.
+
+## Development Reflection
+
+I began this assignment by thoroughly reviewing the lecture notes and the assignment specifications to understand the project requirements. From there, I created an Entity-Relationship Diagram in my notebook to map out the database structure, along with a brief outline of the web page structure that would guide my development. This planning phase helped me visualize the components of the application and ensured that I had a clear understanding of the relationships between different entities.
+
+During the development phase, I followed the ERD diagram closely and referred back to my web page structure notes to stay on track. To ensure that my code was functioning as expected, I employed frequent testing. After every few lines of code, I ran tests to verify that each part of the application was working correctly.
+
+When I encountered problems, I utilized several strategies to resolve them. Laravel's error messages were incredibly helpful in diagnosing issues, and I made extensive use of the dd() function to inspect variables and outputs at different stages of the code execution. Additionally, I ran SQLite queries directly in the terminal to ensure that the database was being updated correctly. These techniques, along with regular testing, helped me resolve issues efficiently and ensure that the application worked as intended.
+
+## Efforts made to encourage reviewers to submit useful reviews
+
+To motivate reviewers to submit high-quality and meaningful reviews, I implemented two key features. The first feature is a Top Reviewers Page, which highlights the top 10 reviewers based on their overall scores. These scores are calculated fairly by combining two factors: the marks students received from their teachers for their assessments, and the average rating they receive from their reviewees for each review they provide. This combination ensures that the rankings reflect both academic performance and the quality of peer reviews.
+
+The second feature I implemented is a dynamic feedback mechanism on the review submission page. This feature displays personalized messages to students based on their current position in the reviewer rankings. For example, if a student is in the top 10% of the total reviewers, they are congratulated and encouraged to maintain their excellent performance. If they are in the top 50%, they are congratulated with encouragement to push further. For students in the bottom half of the rankings, the system provides motivational prompts to improve their ranking by writing better reviews. This real-time feedback encourages students to strive for improvement, not only to rank higher but also to contribute more valuable reviews.
+
+This dual approach of publicly recognizing top reviewers and providing immediate, personalized feedback when submitting reviews can encourage reviewer to write quality reviews for their peers.
+
+## ERD Diagram
+
+![ERD Diagram](/ERD.png)
