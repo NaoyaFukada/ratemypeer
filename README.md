@@ -81,19 +81,47 @@ The demo application is available at **[naoyafukada.com/ratemypeer/](https://nao
 
 ## Development Reflection
 
-I began this assignment by thoroughly reviewing the lecture notes and the assignment specifications to understand the project requirements. From there, I created an Entity-Relationship Diagram in my notebook to map out the database structure, along with a brief outline of the web page structure that would guide my development. This planning phase helped me visualize the components of the application and ensured that I had a clear understanding of the relationships between different entities.
+This project followed a structured development process:
 
-During the development phase, I followed the ERD diagram closely and referred back to my web page structure notes to stay on track. To ensure that my code was functioning as expected, I employed frequent testing. After every few lines of code, I ran tests to verify that each part of the application was working correctly.
+### Planning:
 
-When I encountered problems, I utilized several strategies to resolve them. Laravel's error messages were incredibly helpful in diagnosing issues, and I made extensive use of the dd() function to inspect variables and outputs at different stages of the code execution. Additionally, I ran SQLite queries directly in the terminal to ensure that the database was being updated correctly. These techniques, along with regular testing, helped me resolve issues efficiently and ensure that the application worked as intended.
+- Reviewed the assignment specifications and lecture notes to understand the requirements.
+- Created an Entity-Relationship Diagram (ERD) and a web page structure outline to guide development.
 
-## Efforts made to encourage reviewers to submit useful reviews
+### Development:
 
-To motivate reviewers to submit high-quality and meaningful reviews, I implemented two key features. The first feature is a Top Reviewers Page, which highlights the top 10 reviewers based on their overall scores. These scores are calculated fairly by combining two factors: the marks students received from their teachers for their assessments, and the average rating they receive from their reviewees for each review they provide. This combination ensures that the rankings reflect both academic performance and the quality of peer reviews.
+- Built the database schema using migrations and populated it with seeders.
+- Implemented routing, controllers, and models in Laravel to connect the frontend and backend seamlessly.
+- Created reusable Blade templates for consistency across views.
 
-The second feature I implemented is a dynamic feedback mechanism on the review submission page. This feature displays personalized messages to students based on their current position in the reviewer rankings. For example, if a student is in the top 10% of the total reviewers, they are congratulated and encouraged to maintain their excellent performance. If they are in the top 50%, they are congratulated with encouragement to push further. For students in the bottom half of the rankings, the system provides motivational prompts to improve their ranking by writing better reviews. This real-time feedback encourages students to strive for improvement, not only to rank higher but also to contribute more valuable reviews.
+### Testing:
 
-This dual approach of publicly recognizing top reviewers and providing immediate, personalized feedback when submitting reviews can encourage reviewer to write quality reviews for their peers.
+- Conducted frequent tests after implementing each feature to ensure functionality.
+- Used Laravel's `dd()` and database queries to debug and verify data integrity.
+
+### Problem-Solving:
+
+- Resolved issues using Laravel's error messages and debugging tools.
+- Regularly tested interactions between components to maintain a smooth workflow.
+
+## Efforts to Encourage Useful Reviews
+
+To motivate reviewers to submit high-quality reviews, two key features were implemented:
+
+### Top Reviewers Leaderboard:
+
+- Highlights the top 10 reviewers based on a combination of:
+  - Marks received from teachers for assessments.
+  - Average ratings received from reviewees for their reviews.
+- This approach balances academic performance with the quality of peer reviews.
+
+### Dynamic Feedback on Review Submission Page:
+
+- Displays personalized messages to students based on their ranking:
+  - **Top 10%:** Encouraged to maintain excellent performance.
+  - **Top 50%:** Motivated to push for improvement.
+  - **Bottom 50%:** Prompted with motivational messages to write better reviews.
+- This real-time feedback inspires students to improve their contributions to the peer review process.
 
 ## ERD Diagram
 
